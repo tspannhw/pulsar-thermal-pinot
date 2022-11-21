@@ -15,8 +15,13 @@ docker exec -it pinot-controller bin/pinot-admin.sh JsonToPinotSchema \
   
 ````
 
-thermalsensors
+#### Consume Data in Pulsar
 
+````
+
+bin/pulsar-client consume "persistent://public/default/thermalsensors" -s "thrmlsnosconsumer" -n 0
+
+````
 
 ### Data
 
