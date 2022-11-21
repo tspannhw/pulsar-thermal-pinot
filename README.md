@@ -1,6 +1,15 @@
 # pulsar-thermal-pinot
 Apache Pulsar - Apache Pinot - Thermal Sensor Data
 
+
+### Access Docker Container
+
+````
+
+docker exec -it pinot-controller /bin/bash
+
+````
+
 ### Build a Schema From Data
 
 ````
