@@ -48,7 +48,18 @@ docker exec -it pinot-controller bin/pinot-admin.sh JsonToPinotSchema \
 
 ````
 
-### References
+#### Add our schema
+
+````
+
+docker exec -it pinot-controller bin/pinot-admin.sh AddSchema   \
+  -schemaFile /config/thermalschema.json \
+  -exec
+  
+````
+
+
+#### References
 
 * https://github.com/tspannhw/FLiP-Pi-DeltaLake-Thermal
 * https://github.com/tspannhw/FLiP-Pi-Thermal
