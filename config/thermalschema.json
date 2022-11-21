@@ -45,6 +45,9 @@
   }, {
     "name" : "datetimestamp",
     "dataType" : "STRING"
+  }, {
+    "name" : "totalvocppb",
+    "dataType" : "DOUBLE"
   } ],
   "metricFieldSpecs" : [ {
     "name" : "cputempf",
@@ -59,11 +62,8 @@
     "name" : "co2",
     "dataType" : "DOUBLE"
   }, {
-    "name" : "totalvocppb",
-    "dataType" : "STRING"
-  }, {
     "name" : "equivalentco2ppm",
-    "dataType" : "STRING"
+    "dataType" : "DOUBLE"
   }, {
     "name" : "pressure",
     "dataType" : "DOUBLE"
