@@ -96,7 +96,16 @@ https://docs.pinot.apache.org/basics/data-import/pinot-stream-ingestion/apache-p
 
 This could be millions or billions of records.   
 
+#### Apache Pinot Query
 
+````
+select systemtime, totalvocppb, temperature, cputempf, humidity, co2, equivalentco2ppm,
+       pressure, temperatureicp, ts, datetimestamp, cpu, diskusage, memory, rowid
+from thermal 
+order by ts desc
+limit 200
+
+````
 
 #### References
 
