@@ -1,0 +1,80 @@
+{
+  "schemaName" : "thermal",
+  "dimensionFieldSpecs" : [ {
+    "name" : "uuid",
+    "dataType" : "STRING"
+  }, {
+    "name" : "ipaddress",
+    "dataType" : "STRING"
+  }, {
+    "name" : "runtime",
+    "dataType" : "INT"
+  }, {
+    "name" : "host",
+    "dataType" : "STRING"
+  }, {
+    "name" : "hostname",
+    "dataType" : "STRING"
+  }, {
+    "name" : "macaddress",
+    "dataType" : "STRING"
+  }, {
+    "name" : "endtime",
+    "dataType" : "STRING"
+  }, {
+    "name" : "te",
+    "dataType" : "STRING"
+  }, {
+    "name" : "cpu",
+    "dataType" : "DOUBLE"
+  }, {
+    "name" : "diskusage",
+    "dataType" : "STRING"
+  }, {
+    "name" : "memory",
+    "dataType" : "DOUBLE"
+  }, {
+    "name" : "rowid",
+    "dataType" : "STRING"
+  }, {
+    "name" : "systemtime",
+    "dataType" : "STRING"
+  }, {
+    "name" : "starttime",
+    "dataType" : "STRING"
+  }, {
+    "name" : "datetimestamp",
+    "dataType" : "STRING"
+  } ],
+  "metricFieldSpecs" : [ {
+    "name" : "cputempf",
+    "dataType" : "INT"
+  }, {
+    "name" : "temperature",
+    "dataType" : "DOUBLE"
+  }, {
+    "name" : "humidity",
+    "dataType" : "DOUBLE"
+  }, {
+    "name" : "co2",
+    "dataType" : "DOUBLE"
+  }, {
+    "name" : "totalvocppb",
+    "dataType" : "STRING"
+  }, {
+    "name" : "equivalentco2ppm",
+    "dataType" : "STRING"
+  }, {
+    "name" : "pressure",
+    "dataType" : "DOUBLE"
+  }, {
+    "name" : "temperatureicp",
+    "dataType" : "DOUBLE"
+  } ],
+  "dateTimeFieldSpecs" : [ {
+    "name" : "ts",
+    "dataType" : "INT",
+    "format" : "1:DAYS:EPOCH",
+    "granularity" : "1:DAYS"
+  } ]
+}
