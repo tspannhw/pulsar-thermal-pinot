@@ -40,3 +40,4 @@ Apache Pulsar - Apache Pinot - Thermal Sensor Data
 * https://github.com/tspannhw/FLiP-Pi-DeltaLake-Thermal
 * https://github.com/tspannhw/FLiP-Pi-Thermal
 * https://github.com/tspannhw/FLiP-Pi-Thermal/blob/main/cloudsensors.md
+* https://docs.pinot.apache.org/integrations/superset
