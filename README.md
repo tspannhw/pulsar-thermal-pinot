@@ -64,6 +64,11 @@ docker exec -it pinot-controller bin/pinot-admin.sh AddSchema   \
   -schemaFile /config/thermalschema.json \
   -exec
   
+  
+docker exec -it pinot-controller bin/pinot-admin.sh AddTable   \
+  -tableConfigFile /config/thermaltable.json -schemaFile /config/thermalschema.json  \
+  -exec
+  
 ````
 
 
