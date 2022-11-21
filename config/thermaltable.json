@@ -21,7 +21,7 @@
       "stream.pulsar.bootstrap.servers": "pulsar://Timothys-MBP:6650",
       "stream.pulsar.consumer.type": "lowlevel",
       "stream.pulsar.fetch.timeout.millis": "10000",
-      "stream.pulsar.consumer.prop.auto.offset.reset": "smallest",
+      "stream.pulsar.consumer.prop.auto.offset.reset": "largest",
       "stream.pulsar.consumer.factory.class.name": "org.apache.pinot.plugin.stream.pulsar.PulsarConsumerFactory",
       "stream.pulsar.decoder.class.name": "org.apache.pinot.plugin.inputformat.json.JSONMessageDecoder",
       "realtime.segment.flush.threshold.rows": "0",
