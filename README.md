@@ -1,6 +1,19 @@
 # pulsar-thermal-pinot
 Apache Pulsar - Apache Pinot - Thermal Sensor Data
 
+### Build a Schema From Data
+
+````
+
+docker exec -it pinot-controller bin/pinot-admin.sh JsonToPinotSchema \
+  -timeColumnName ts \
+  -metrics "temperature,humidity,co2,totalvocppb,equivalentco2ppm,pressure,temperatureicp,cputempf"\
+  -dimensions "host,ipaddress" \
+  -pinotSchemaName=thermal \
+  -jsonFile=/data/thermal.json \
+  -outputDir=/config
+  
+````
 
 ### Data
 
