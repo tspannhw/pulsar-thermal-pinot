@@ -110,29 +110,50 @@ limit 200
 
 #### Superset + Pinot
 
-
-Run this:   https://github.com/kbastani/climate-change-analysis/blob/master/docker/docker-init.sh
+Run this to initialize:   https://github.com/kbastani/climate-change-analysis/blob/master/docker/docker-init.sh
 
 * https://docs.pinot.apache.org/users/user-guide-query/supported-transformations
 * https://github.com/apache/superset/blob/master/superset/db_engine_specs/pinot.py
 * https://docs.pinot.apache.org/configuration-reference/functions/datetimeconvert
 * https://medium.com/apache-pinot-developer-blog/building-a-climate-dashboard-with-apache-pinot-and-superset-d3ee8cb7941d
 * https://github.com/kbastani/climate-change-analysis
+* https://superset.apache.org/
+
+#### Let's Explore and Visualize Apache Pinot Data
+
+![Apache Superset](https://superset.apache.org/img/superset-logo-horiz-apache.svg)
 
 
-![Datasets](https://github.com/tspannhw/pulsar-thermal-pinot/raw/main/images/superSetDatasets.jpg)
+#### Add a Database
 
 ![Edit Database](https://github.com/tspannhw/pulsar-thermal-pinot/raw/main/images/superseteditdatabase.jpg)
 
-![Create a New Chart](https://github.com/tspannhw/pulsar-thermal-pinot/raw/main/images/supersetcreatenewchart.jpg)
 
-![Save Chart](https://github.com/tspannhw/pulsar-thermal-pinot/raw/main/images/saveChartSuperset.jpg)
+#### Configure a Pinot dataset
+
+![Datasets](https://github.com/tspannhw/pulsar-thermal-pinot/raw/main/images/superSetDatasets.jpg)
+
+#### Query and Validate the dataset
 
 ![Query Dataset](https://github.com/tspannhw/pulsar-thermal-pinot/raw/main/images/supersetthermalquery.jpg)
 
+#### Create a new chart from that dataset
+
+![Create a New Chart](https://github.com/tspannhw/pulsar-thermal-pinot/raw/main/images/supersetcreatenewchart.jpg)
+
+#### Save the chart to a dashboard
+
+![Save Chart](https://github.com/tspannhw/pulsar-thermal-pinot/raw/main/images/saveChartSuperset.jpg)
+
+#### Build a dashboard of charts and markdown
+
 ![Dashboard](https://raw.githubusercontent.com/tspannhw/pulsar-thermal-pinot/main/images/supersetdashboard.jpg)
 
+#### Build more charts
+
 ![chart1](https://github.com/tspannhw/pulsar-thermal-pinot/raw/main/superset/avg-temperature-over-time-2022-11-22T20-35-01.410Z.jpg)
+
+#### Build more charts
 
 ![chart2](https://github.com/tspannhw/pulsar-thermal-pinot/raw/main/superset/thermal-sensor-data-2022-11-22T20-32-45.850Z.jpg)
 
