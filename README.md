@@ -128,7 +128,6 @@ Run this:   https://github.com/kbastani/climate-change-analysis/blob/master/dock
 * https://dev.startree.ai/docs/pinot/recipes/pulsar
 * https://dev.startree.ai/docs/pinot/recipes/infer-schema-json-data
 * https://github.com/startreedata/pinot-recipes/blob/main/recipes/json-nested/README.md
-* https://medium.com/apache-pinot-developer-blog/building-a-climate-dashboard-with-apache-pinot-and-superset-d3ee8cb7941d
 * https://dev.startree.ai/docs/pinot/recipes/pulsar
 * https://github.com/startreedata/pinot-recipes/tree/main/recipes/pulsar
 * https://github.com/apache/pinot/blob/master/pinot-tools/src/main/resources/examples/stream/airlineStats/airlineStats_schema.json
