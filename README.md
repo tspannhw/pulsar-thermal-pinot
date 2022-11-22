@@ -107,6 +107,10 @@ limit 200
 
 ````
 
+#### Superset + Pinot
+
+* https://docs.pinot.apache.org/users/user-guide-query/supported-transformations
+
 #### References
 
 * https://github.com/tspannhw/FLiP-Pi-DeltaLake-Thermal
