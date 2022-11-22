@@ -121,4 +121,3 @@ limit 200
 * https://github.com/startreedata/pinot-recipes/tree/main/recipes/pulsar
 * https://github.com/apache/pinot/blob/master/pinot-tools/src/main/resources/examples/stream/airlineStats/airlineStats_schema.json
 
-
