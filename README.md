@@ -2,6 +2,8 @@
 
 Apache Pulsar - Apache Pinot - Thermal Sensor Data
 
+![](https://github.com/tspannhw/pulsar-thermal-pinot/raw/main/images/pinotpluspulsar.jpg)
+
 
 ### Access Docker Container
 
@@ -95,7 +97,35 @@ If you use stream.pulsar.consumer.prop.auto.offset.reset=smallest than it goes b
 
 https://docs.pinot.apache.org/basics/data-import/pinot-stream-ingestion/apache-pulsar
 
-This could be millions or billions of records.   
+This could be millions or billions of records.  
+
+
+#### Pinot Cluster
+
+![Pinot Table Definition](https://github.com/tspannhw/pulsar-thermal-pinot/blob/main/images/pinotTableDefinition.jpg?raw=true)
+
+#### Query Console Table Schema
+
+![](https://github.com/tspannhw/pulsar-thermal-pinot/raw/main/images/pinotqueryConsole.jpg)
+
+#### Query Console Table Information
+
+![](https://github.com/tspannhw/pulsar-thermal-pinot/raw/main/images/pinotTableInfo.jpg)
+
+
+
+#### Query Console SQL results
+
+![](https://github.com/tspannhw/pulsar-thermal-pinot/raw/main/images/pinotqueryconsole1.jpg)
+
+
+#### Adding a Realtime Table via REST AI / Swagger Docs
+
+![](https://github.com/tspannhw/pulsar-thermal-pinot/raw/main/images/pinotswaggerAddTable.jpg)
+
+
+
+
 
 #### Apache Pinot Query
 
