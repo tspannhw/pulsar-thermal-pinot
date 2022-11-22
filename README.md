@@ -1,4 +1,5 @@
 # pulsar-thermal-pinot
+
 Apache Pulsar - Apache Pinot - Thermal Sensor Data
 
 
@@ -109,9 +110,14 @@ limit 200
 
 #### Superset + Pinot
 
+
+Run this:   https://github.com/kbastani/climate-change-analysis/blob/master/docker/docker-init.sh
+
 * https://docs.pinot.apache.org/users/user-guide-query/supported-transformations
 * https://github.com/apache/superset/blob/master/superset/db_engine_specs/pinot.py
 * https://docs.pinot.apache.org/configuration-reference/functions/datetimeconvert
+* https://medium.com/apache-pinot-developer-blog/building-a-climate-dashboard-with-apache-pinot-and-superset-d3ee8cb7941d
+* https://github.com/kbastani/climate-change-analysis
 
 #### References
 
