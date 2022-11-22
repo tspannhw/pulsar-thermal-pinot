@@ -119,6 +119,18 @@ Run this:   https://github.com/kbastani/climate-change-analysis/blob/master/dock
 * https://medium.com/apache-pinot-developer-blog/building-a-climate-dashboard-with-apache-pinot-and-superset-d3ee8cb7941d
 * https://github.com/kbastani/climate-change-analysis
 
+![chart1](https://github.com/tspannhw/pulsar-thermal-pinot/raw/main/superset/avg-temperature-over-time-2022-11-22T20-35-01.410Z.jpg)
+
+![chart2](https://github.com/tspannhw/pulsar-thermal-pinot/raw/main/superset/thermal-sensor-data-2022-11-22T20-32-45.850Z.jpg)
+
+
+#### Superset CSV Chart Extract
+
+* https://github.com/tspannhw/pulsar-thermal-pinot/blob/main/superset/20221122_203449.csv
+* https://github.com/tspannhw/pulsar-thermal-pinot/blob/main/superset/20221122_203455.csv
+* https://github.com/tspannhw/pulsar-thermal-pinot/blob/main/superset/20221122_203505.csv
+
+
 #### References
 
 * https://github.com/tspannhw/FLiP-Pi-DeltaLake-Thermal
