@@ -209,4 +209,5 @@ Run this to initialize:   https://github.com/kbastani/climate-change-analysis/bl
 * https://github.com/startreedata/pinot-recipes/tree/main/recipes/pulsar
 * https://github.com/apache/pinot/blob/master/pinot-tools/src/main/resources/examples/stream/airlineStats/airlineStats_schema.json
 * https://www.markhneedham.com/blog/2021/06/21/pinot-broker-resource-missing/
+* https://docs.pinot.apache.org/developers/advanced/ingestion-level-transformations
 
