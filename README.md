@@ -199,7 +199,14 @@ Run this to initialize:   https://github.com/kbastani/climate-change-analysis/bl
 
 https://youtu.be/KMbTlmoDXXA
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/KMbTlmoDXXA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<object width="425" height="350">
+  <param name="movie" value="[http://www.youtube.com/user/wwwLoveWatercom?v=BTRN1YETpyg](https://www.youtube.com/embed/KMbTlmoDXXA)" />
+  <param name="wmode" value="transparent" />
+  <embed src="https://www.youtube.com/embed/KMbTlmoDXXA"
+         type="application/x-shockwave-flash"
+         wmode="transparent" width="425" height="350" />
+</object>
 
 #### References
 
