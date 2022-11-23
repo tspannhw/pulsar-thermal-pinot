@@ -195,6 +195,11 @@ Run this to initialize:   https://github.com/kbastani/climate-change-analysis/bl
 * https://github.com/tspannhw/pulsar-thermal-pinot/blob/main/superset/20221122_203455.csv
 * https://github.com/tspannhw/pulsar-thermal-pinot/blob/main/superset/20221122_203505.csv
 
+#### Video Preview
+
+https://youtu.be/KMbTlmoDXXA
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/KMbTlmoDXXA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 #### References
 
