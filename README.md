@@ -35,6 +35,16 @@ bin/pulsar-client consume "persistent://public/default/thermalsensors" -s "thrml
 
 ````
 
+#### DevOps Pulsar
+
+````
+curl http://localhost:8080/admin/v2/persistent/public/default
+
+curl http://localhost:8080/admin/v2/persistent/public/default/thermalsensors-partition-0/stats
+
+````
+
+
 #### Data
 
 ````
@@ -309,3 +319,4 @@ https://youtu.be/KMbTlmoDXXA
 * https://www.markhneedham.com/blog/2021/06/21/pinot-broker-resource-missing/
 * https://docs.pinot.apache.org/developers/advanced/ingestion-level-transformations
 * https://nightlies.apache.org/flink/flink-docs-master/docs/dev/table/sql/show/
+* https://github.com/tspannhw/FLiP-SQL
