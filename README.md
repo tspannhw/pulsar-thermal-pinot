@@ -320,3 +320,4 @@ https://youtu.be/KMbTlmoDXXA
 * https://docs.pinot.apache.org/developers/advanced/ingestion-level-transformations
 * https://nightlies.apache.org/flink/flink-docs-master/docs/dev/table/sql/show/
 * https://github.com/tspannhw/FLiP-SQL
+* https://github.com/tspannhw/FLiP-Py-Pi-GasThermal
