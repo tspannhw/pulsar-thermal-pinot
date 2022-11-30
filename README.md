@@ -133,6 +133,25 @@ select * from thermalsensors;
 
 ````
 
+#### Create Postgresql Table
+
+````
+
+CREATE TABLE "public"."thermalalerts" (
+systemtime VARCHAR(256),
+humidity DOUBLE,
+temperature DOUBLE,
+uuid VARCHAR(256),
+co2 DOUBLE,
+datetimestamp VARCHAR(256),
+rowid VARCHAR(256),
+diskusage VARCHAR(256)
+);
+
+
+
+````
+
 #### Delete Table and Delete Schema
 
 ````
