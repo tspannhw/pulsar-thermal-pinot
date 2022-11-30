@@ -149,14 +149,15 @@ select * from thermalsensors;
 
 CREATE TABLE "public"."thermalalerts" (
 systemtime VARCHAR(256),
-humidity DOUBLE,
-temperature DOUBLE,
+humidity FLOAT,
+temperature FLOAT,
 uuid VARCHAR(256),
-co2 DOUBLE,
+co2 FLOAT,
 datetimestamp VARCHAR(256),
 rowid VARCHAR(256),
 diskusage VARCHAR(256)
 );
+
 
 
 
