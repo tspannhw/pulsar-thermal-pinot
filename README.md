@@ -321,3 +321,4 @@ https://youtu.be/KMbTlmoDXXA
 * https://nightlies.apache.org/flink/flink-docs-master/docs/dev/table/sql/show/
 * https://github.com/tspannhw/FLiP-SQL
 * https://github.com/tspannhw/FLiP-Py-Pi-GasThermal
+* https://github.com/tspannhw/FLiPS-Xavier-Sensor
