@@ -1,11 +1,11 @@
-# pulsar-thermal-pinot
+### pulsar-thermal-pinot
 
 Apache Pulsar - Apache Pinot - Thermal Sensor Data
 
 ![](https://github.com/tspannhw/pulsar-thermal-pinot/raw/main/images/pinotpluspulsar.jpg)
 
 
-### Access Docker Container
+#### Access Docker Container
 
 ````
 
@@ -13,7 +13,7 @@ docker exec -it pinot-controller /bin/bash
 
 ````
 
-### Build a Schema From Data
+#### Build a Schema From Data
 
 ````
 
@@ -35,7 +35,7 @@ bin/pulsar-client consume "persistent://public/default/thermalsensors" -s "thrml
 
 ````
 
-### Data
+#### Data
 
 ````
 
@@ -65,6 +65,71 @@ bin/pulsar-client consume "persistent://public/default/thermalsensors" -s "thrml
  "pressure": 102048.65,
  "temperatureicp": 82.0
 }
+
+````
+
+#### Continuous Analytics with Flink SQL (Pulsar-Flink 1.15+ Connector)
+
+Reference:  https://github.com/tspannhw/pulsar-transit-function
+
+````
+
+CREATE CATALOG pulsar WITH (
+   'type' = 'pulsar-catalog',
+   'catalog-service-url' = 'pulsar://localhost:6650',
+   'catalog-admin-url' = 'http://localhost:8080'
+);
+
+SHOW CURRENT DATABASE;
+SHOW DATABASES;
+
+USE CATALOG pulsar;
+
+set table.dynamic-table-options.enabled = true;
+
+show databases;
+
+use `public/default`;
+
+SHOW TABLES;
+
+describe `thermalsensors`;
+
+show create table `thermalsensors`;
+CREATE TABLE `pulsar`.`public/default`.`thermalsensors` (
+  `uuid` VARCHAR(2147483647) NOT NULL,
+  `ipaddress` VARCHAR(2147483647) NOT NULL,
+  `cputempf` INT NOT NULL,
+  `runtime` INT NOT NULL,
+  `host` VARCHAR(2147483647) NOT NULL,
+  `hostname` VARCHAR(2147483647) NOT NULL,
+  `macaddress` VARCHAR(2147483647) NOT NULL,
+  `endtime` VARCHAR(2147483647) NOT NULL,
+  `te` VARCHAR(2147483647) NOT NULL,
+  `cpu` FLOAT NOT NULL,
+  `diskusage` VARCHAR(2147483647) NOT NULL,
+  `memory` FLOAT NOT NULL,
+  `rowid` VARCHAR(2147483647) NOT NULL,
+  `systemtime` VARCHAR(2147483647) NOT NULL,
+  `ts` INT NOT NULL,
+  `starttime` VARCHAR(2147483647) NOT NULL,
+  `datetimestamp` VARCHAR(2147483647) NOT NULL,
+  `temperature` FLOAT NOT NULL,
+  `humidity` FLOAT NOT NULL,
+  `co2` FLOAT NOT NULL,
+  `totalvocppb` FLOAT NOT NULL,
+  `equivalentco2ppm` FLOAT NOT NULL,
+  `pressure` FLOAT NOT NULL,
+  `temperatureicp` FLOAT NOT NULL
+) WITH (
+  'connector' = 'pulsar',
+  'topics' = 'persistent://public/default/thermalsensors',
+  'format' = 'json',
+  'admin-url' = 'http://localhost:8080',
+  'service-url' = 'pulsar://localhost:6650'
+)
+
+select * from thermalsensors;
 
 ````
 
@@ -224,3 +289,4 @@ https://youtu.be/KMbTlmoDXXA
 * https://github.com/apache/pinot/blob/master/pinot-tools/src/main/resources/examples/stream/airlineStats/airlineStats_schema.json
 * https://www.markhneedham.com/blog/2021/06/21/pinot-broker-resource-missing/
 * https://docs.pinot.apache.org/developers/advanced/ingestion-level-transformations
+* https://nightlies.apache.org/flink/flink-docs-master/docs/dev/table/sql/show/
