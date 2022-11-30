@@ -68,17 +68,22 @@ bin/pulsar-client consume "persistent://public/default/thermalsensors" -s "thrml
 
 ````
 
+#### Delete Table and Delete Schema
+
+````
+
+curl -X DELETE "http://localhost:9000/tables/thermal?type=realtime" -H "accept: application/json"
+
+curl -X DELETE "http://localhost:9000/schemas/thermal" -H "accept: application/json"
+
+````
+
 #### Add our schema
 
 ````
 
 docker exec -it pinot-controller bin/pinot-admin.sh AddSchema   \
   -schemaFile /config/thermalschema.json \
-  -exec
-  
-  
-docker exec -it pinot-controller bin/pinot-admin.sh AddTable   \
-  -tableConfigFile /config/thermaltable.json -schemaFile /config/thermalschema.json  \
   -exec
   
 ````
@@ -122,8 +127,6 @@ This could be millions or billions of records.
 #### Adding a Realtime Table via REST AI / Swagger Docs
 
 ![](https://github.com/tspannhw/pulsar-thermal-pinot/raw/main/images/pinotswaggerAddTable.jpg)
-
-
 
 
 
@@ -188,7 +191,6 @@ Run this to initialize:   https://github.com/kbastani/climate-change-analysis/bl
 ![chart2](https://github.com/tspannhw/pulsar-thermal-pinot/raw/main/superset/thermal-sensor-data-2022-11-22T20-32-45.850Z.jpg)
 
 
-
 #### Superset CSV Chart Extract
 
 * https://github.com/tspannhw/pulsar-thermal-pinot/blob/main/superset/20221122_203449.csv
@@ -222,4 +224,3 @@ https://youtu.be/KMbTlmoDXXA
 * https://github.com/apache/pinot/blob/master/pinot-tools/src/main/resources/examples/stream/airlineStats/airlineStats_schema.json
 * https://www.markhneedham.com/blog/2021/06/21/pinot-broker-resource-missing/
 * https://docs.pinot.apache.org/developers/advanced/ingestion-level-transformations
-
