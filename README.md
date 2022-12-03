@@ -10,6 +10,9 @@ https://www.meetup.com/new-york-city-apache-pulsar-meetup/events/289817171/
 
 ![meetup](https://github.com/tspannhw/pulsar-thermal-pinot/raw/main/images/startree_pinot-streamnative_pulsar-social_banner-v1.png)
 
+
+![flipnkitten](https://raw.githubusercontent.com/tspannhw/pulsar-thermal-pinot/main/images/flipnkitten.jpg)
+
 #### Access Docker Container
 
 ````
@@ -315,27 +318,29 @@ https://youtu.be/KMbTlmoDXXA
 
 #### NiFI to Postgresql
 
+![img](https://raw.githubusercontent.com/tspannhw/pulsar-thermal-pinot/main/images/nifioverview.jpg)
+
+![img](https://github.com/tspannhw/pulsar-thermal-pinot/raw/main/images/NiFiFlowFlow.jpg)
+
+![img](https://raw.githubusercontent.com/tspannhw/pulsar-thermal-pinot/main/images/nifiQueryFilter.jpg)
+
+
+
 ![img](https://github.com/tspannhw/pulsar-thermal-pinot/raw/main/images/provenanceevent.jpg)
 
 ![img](https://github.com/tspannhw/pulsar-thermal-pinot/raw/main/images/postgrescontrollernifi.jpg)
 
-![img]()
-![img]()
-![img]()
-![img]()
-![img]()
-![img]()
-![img]()
+![img](https://raw.githubusercontent.com/tspannhw/pulsar-thermal-pinot/main/images/nifitopulsar.jpg)
+
+![img](https://github.com/tspannhw/pulsar-thermal-pinot/raw/main/images/NiFiToPGSQL.jpg)
 
 #### Postgresql Exploration
 
+![img](https://github.com/tspannhw/pulsar-thermal-pinot/raw/main/images/thermalpostgresql.jpg)
 ![img](https://github.com/tspannhw/pulsar-thermal-pinot/raw/main/images/postgrestable.jpg)
-![img]()
-![img]()
-![img]()
-![img]()
-
-
+![img](https://github.com/tspannhw/pulsar-thermal-pinot/raw/main/images/thermalalertspgsql.jpg)
+![img](https://github.com/tspannhw/pulsar-thermal-pinot/raw/main/images/thermalalertstable.jpg)
+![img](https://raw.githubusercontent.com/tspannhw/pulsar-thermal-pinot/main/images/pgsqlcreatetableddl.jpg)
 
 
 #### References
@@ -356,3 +361,6 @@ https://youtu.be/KMbTlmoDXXA
 * https://github.com/tspannhw/FLiP-SQL
 * https://github.com/tspannhw/FLiP-Py-Pi-GasThermal
 * https://github.com/tspannhw/FLiPS-Xavier-Sensor
+
+![mastodon](https://github.com/tspannhw/pulsar-thermal-pinot/raw/main/images/timmastodon.jpg)
+
