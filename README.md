@@ -6,7 +6,6 @@ Apache Pulsar - Apache Pinot - Thermal Sensor Data
 
 ![img](https://raw.githubusercontent.com/tspannhw/pulsar-thermal-pinot/main/images/thermalpinotflipn.png)
 
-![img](https://raw.githubusercontent.com/tspannhw/pulsar-thermal-pinot/main/images/pinotpulsarfriends.png)
 
 ## Meetup December 2022
 
