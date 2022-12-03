@@ -4,6 +4,11 @@ Apache Pulsar - Apache Pinot - Thermal Sensor Data
 
 ![](https://github.com/tspannhw/pulsar-thermal-pinot/raw/main/images/pinotpluspulsar.jpg)
 
+## Meetup December 2022
+
+https://www.meetup.com/new-york-city-apache-pulsar-meetup/events/289817171/
+
+![meetup](https://github.com/tspannhw/pulsar-thermal-pinot/raw/main/images/startree_pinot-streamnative_pulsar-social_banner-v1.png)
 
 #### Access Docker Container
 
@@ -158,9 +163,6 @@ rowid VARCHAR(256),
 diskusage VARCHAR(256)
 );
 
-
-
-
 ````
 
 #### Delete Table and Delete Schema
@@ -304,6 +306,37 @@ https://youtu.be/KMbTlmoDXXA
          type="application/x-shockwave-flash"
          wmode="transparent" width="425" height="350" />
 </object>
+
+
+![img](https://github.com/tspannhw/pulsar-thermal-pinot/raw/main/images/pulsarcreators.jpg)
+
+
+#### Pulsar to NiFi
+
+#### NiFI to Postgresql
+
+![img](https://github.com/tspannhw/pulsar-thermal-pinot/raw/main/images/provenanceevent.jpg)
+
+![img](https://github.com/tspannhw/pulsar-thermal-pinot/raw/main/images/postgrescontrollernifi.jpg)
+
+![img]()
+![img]()
+![img]()
+![img]()
+![img]()
+![img]()
+![img]()
+
+#### Postgresql Exploration
+
+![img](https://github.com/tspannhw/pulsar-thermal-pinot/raw/main/images/postgrestable.jpg)
+![img]()
+![img]()
+![img]()
+![img]()
+
+
+
 
 #### References
 
