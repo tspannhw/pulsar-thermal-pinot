@@ -322,6 +322,8 @@ https://youtu.be/KMbTlmoDXXA
 
 ![img](https://github.com/tspannhw/pulsar-thermal-pinot/raw/main/images/NiFiFlowFlow.jpg)
 
+![img](https://raw.githubusercontent.com/tspannhw/pulsar-thermal-pinot/main/images/nififlowcloseup.jpg)
+
 ![img](https://raw.githubusercontent.com/tspannhw/pulsar-thermal-pinot/main/images/nifiQueryFilter.jpg)
 
 
