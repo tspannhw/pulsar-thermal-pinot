@@ -248,6 +248,7 @@ limit 200
 
 Run this to initialize:   https://github.com/kbastani/climate-change-analysis/blob/master/docker/docker-init.sh
 
+* https://docs.pinot.apache.org/integrations/superset
 * https://docs.pinot.apache.org/users/user-guide-query/supported-transformations
 * https://github.com/apache/superset/blob/master/superset/db_engine_specs/pinot.py
 * https://docs.pinot.apache.org/configuration-reference/functions/datetimeconvert
