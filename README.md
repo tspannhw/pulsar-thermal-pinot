@@ -16,26 +16,10 @@ https://www.meetup.com/new-york-city-apache-pulsar-meetup/events/289817171/
 
 ![flipnkitten](https://raw.githubusercontent.com/tspannhw/pulsar-thermal-pinot/main/images/flipnkitten.jpg)
 
-#### Access Docker Container
+#### Create Topic in Pulsar
 
 ````
-
-docker exec -it pinot-controller /bin/bash
-
-````
-
-#### Build a Schema From Data
-
-````
-
-docker exec -it pinot-controller bin/pinot-admin.sh JsonToPinotSchema \
-  -timeColumnName ts \
-  -metrics "temperature,humidity,co2,totalvocppb,equivalentco2ppm,pressure,temperatureicp,cputempf"\
-  -dimensions "host,ipaddress" \
-  -pinotSchemaName=thermal \
-  -jsonFile=/data/thermal.json \
-  -outputDir=/config
-  
+bin/pulsar-admin topics create persistent://public/default/thermalsensors
 ````
 
 #### Consume Data in Pulsar
@@ -171,6 +155,15 @@ diskusage VARCHAR(256)
 
 ````
 
+
+#### Access Docker Container
+
+````
+
+docker exec -it pinot-controller /bin/bash
+
+````
+
 #### Delete Table and Delete Schema
 
 ````
@@ -179,6 +172,21 @@ curl -X DELETE "http://localhost:9000/tables/thermal?type=realtime" -H "accept: 
 
 curl -X DELETE "http://localhost:9000/schemas/thermal" -H "accept: application/json"
 
+````
+
+
+#### Build a Schema From JSON Data
+
+````
+
+docker exec -it pinot-controller bin/pinot-admin.sh JsonToPinotSchema \
+  -timeColumnName ts \
+  -metrics "temperature,humidity,co2,totalvocppb,equivalentco2ppm,pressure,temperatureicp,cputempf"\
+  -dimensions "host,ipaddress" \
+  -pinotSchemaName=thermal \
+  -jsonFile=/data/thermal.json \
+  -outputDir=/config
+  
 ````
 
 #### Add our schema
@@ -212,14 +220,15 @@ This could be millions or billions of records.
 
 ![Pinot Table Definition](https://github.com/tspannhw/pulsar-thermal-pinot/blob/main/images/pinotTableDefinition.jpg?raw=true)
 
+
 #### Query Console Table Schema
 
 ![](https://github.com/tspannhw/pulsar-thermal-pinot/raw/main/images/pinotqueryConsole.jpg)
 
+
 #### Query Console Table Information
 
 ![](https://github.com/tspannhw/pulsar-thermal-pinot/raw/main/images/pinotTableInfo.jpg)
-
 
 
 #### Query Console SQL results
@@ -230,7 +239,6 @@ This could be millions or billions of records.
 #### Adding a Realtime Table via REST AI / Swagger Docs
 
 ![](https://github.com/tspannhw/pulsar-thermal-pinot/raw/main/images/pinotswaggerAddTable.jpg)
-
 
 
 #### Apache Pinot Query
@@ -255,6 +263,7 @@ Run this to initialize:   https://github.com/kbastani/climate-change-analysis/bl
 * https://medium.com/apache-pinot-developer-blog/building-a-climate-dashboard-with-apache-pinot-and-superset-d3ee8cb7941d
 * https://github.com/kbastani/climate-change-analysis
 * https://superset.apache.org/
+* 
 
 #### Let's Explore and Visualize Apache Pinot Data
 
@@ -369,4 +378,3 @@ https://youtu.be/KMbTlmoDXXA
 * https://github.com/tspannhw/FLiPS-Xavier-Sensor
 
 ![mastodon](https://github.com/tspannhw/pulsar-thermal-pinot/raw/main/images/timmastodon.jpg)
-
