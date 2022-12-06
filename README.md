@@ -207,6 +207,13 @@ curl -X POST "http://localhost:9000/tables" -H "accept: application/json" -H "Co
 
 ````
 
+#### Fix a segment
+
+````
+curl -X POST "{host}/segments/thermal_REALTIME/{segmentName}/reset"
+
+````
+
 #### Defining Pulsar-Pinot Realtime Table
 
 If you use stream.pulsar.consumer.prop.auto.offset.reset=smallest than it goes back earliest which can be a lot of data.
