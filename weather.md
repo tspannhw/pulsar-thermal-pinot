@@ -157,6 +157,15 @@ curl -X POST "http://localhost:9000/tables" -H "accept: application/json" -H "Co
 
 #### Example Data
 
+#### Start Flink in Docker
+
+* See https://github.com/streamnative/flink-example/blob/main/docs/sql-example.md
+
+````
+./bin/start-cluster.sh
+./bin/sql-client.sh
+````
+
 #### Airport Weather Flink SQL Table
 
 ````
