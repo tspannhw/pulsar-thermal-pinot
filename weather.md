@@ -190,7 +190,8 @@ CREATE TABLE airportweather (
 `station_id` STRING,                       
 `temp_c` DOUBLE,                      
 `temp_f` DOUBLE,                      
-`temperature_string` STRING,                       
+`temperature_string` STRING,   
+`ts` DOUBLE,
 `two_day_history_url` STRING,                       
 `visibility_mi` DOUBLE,                      
 `weather` STRING,                       
@@ -201,10 +202,10 @@ CREATE TABLE airportweather (
 `wind_string` STRING
 ) WITH (
   'connector' = 'pulsar',
-  'topics' = 'persistent://public/default/aircraftweather',
+  'topics' = 'persistent://public/default/aircraftweather2',
   'format' = 'json',
-  'admin-url' = 'http://localhost:8080',
-  'service-url' = 'pulsar://localhost:6650'
+  'admin-url' = 'http://Timothys-MBP:8080',
+  'service-url' = 'pulsar://Timothys-MBP:6650'
 )
 
 
