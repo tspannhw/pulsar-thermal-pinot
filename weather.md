@@ -168,6 +168,10 @@ curl -X POST "http://localhost:9000/tables" -H "accept: application/json" -H "Co
 
 pinot+http://192.168.1.157:8099/query?server=192.168.1.157:9000/
 
+pinot+http://timothys-mbp:8099/query?server=http://timothys-mbp:9000/
+
+See:  https://docs.pinot.apache.org/integrations/superset
+
 #### Example Data - data/weather.json
 
 ````
