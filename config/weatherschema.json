@@ -1,0 +1,98 @@
+{
+  "schemaName" : "weather",
+  "dimensionFieldSpecs" : [ {
+    "name" : "location",
+    "dataType" : "STRING"
+  }, {
+    "name" : "station_id",
+    "dataType" : "STRING"
+  }, {
+    "name" : "latitude",
+    "dataType" : "DOUBLE"
+  }, {
+    "name" : "longitude",
+    "dataType" : "DOUBLE"
+  }, {
+    "name" : "observation_time",
+    "dataType" : "STRING"
+  }, {
+    "name" : "observation_time_rfc822",
+    "dataType" : "STRING"
+  }, {
+    "name" : "weather",
+    "dataType" : "STRING"
+  }, {
+    "name" : "temperature_string",
+    "dataType" : "STRING"
+  }, {
+    "name" : "wind_string",
+    "dataType" : "STRING"
+  }, {
+    "name" : "wind_dir",
+    "dataType" : "STRING"
+  }, {
+    "name" : "wind_degrees",
+    "dataType" : "INT"
+  }, {
+    "name" : "wind_kt",
+    "dataType" : "INT"
+  }, {
+    "name" : "dewpoint_string",
+    "dataType" : "STRING"
+  }, {
+    "name" : "dewpoint_f",
+    "dataType" : "DOUBLE"
+  }, {
+    "name" : "dewpoint_c",
+    "dataType" : "DOUBLE"
+  }, {
+    "name" : "heat_index_f",
+    "dataType" : "INT"
+  }, {
+    "name" : "heat_index_c",
+    "dataType" : "INT"
+  }, {
+    "name" : "visibility_mi",
+    "dataType" : "DOUBLE"
+  }, {
+    "name" : "icon_url_base",
+    "dataType" : "STRING"
+  }, {
+    "name" : "two_day_history_url",
+    "dataType" : "STRING"
+  }, {
+    "name" : "icon_url_name",
+    "dataType" : "STRING"
+  }, {
+    "name" : "ob_url",
+    "dataType" : "STRING"
+  }, {
+    "name" : "uuid",
+    "dataType" : "STRING"
+  } ],
+  "metricFieldSpecs" : [ {
+    "name" : "temp_f",
+    "dataType" : "DOUBLE"
+  }, {
+    "name" : "temp_c",
+    "dataType" : "DOUBLE"
+  }, {
+    "name" : "relative_humidity",
+    "dataType" : "INT"
+  }, {
+    "name" : "wind_mph",
+    "dataType" : "DOUBLE"
+  }, {
+    "name" : "pressure_mb",
+    "dataType" : "DOUBLE"
+  }, {
+    "name" : "pressure_in",
+    "dataType" : "DOUBLE"
+  } ],
+  "dateTimeFieldSpecs" : [ {
+    "name" : "ts",
+    "dataType" : "LONG",
+    "format" : "1:DAYS:EPOCH",
+    "granularity" : "1:DAYS"
+  } ]
+}
