@@ -155,6 +155,10 @@ curl -X POST "http://localhost:9000/tables" -H "accept: application/json" -H "Co
 }
 ````
 
+#### Pinot to Superset connection
+
+pinot+http://192.168.1.157:8099/query?server=192.168.1.157:9000/
+
 #### Example Data
 
 #### Start Flink in Docker
