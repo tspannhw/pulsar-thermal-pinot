@@ -1,5 +1,147 @@
+#### Pulsar - Pinot - Weather
+
+#### Weather Function builds topics
 
 
+#### Build Pinot Schema
+
+````
+
+docker exec -it pinot-controller bin/pinot-admin.sh JsonToPinotSchema \
+  -timeColumnName ts \
+  -metrics "temperature,humidity,co2,totalvocppb,equivalentco2ppm,pressure,temperatureicp,cputempf"\
+  -dimensions "host,ipaddress" \
+  -pinotSchemaName=weather \
+  -jsonFile=/data/weather.json \
+  -outputDir=/config
+  
+  
+````
+
+#### Pular Schmea
+
+````
+{
+  "type" : "record",
+  "name" : "Weather",
+  "namespace" : "dev.pulsarfunction.weather",
+  "fields" : [ {
+    "name" : "dewpoint_c",
+    "type" : "double"
+  }, {
+    "name" : "dewpoint_f",
+    "type" : "double"
+  }, {
+    "name" : "dewpoint_string",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "heat_index_c",
+    "type" : "int"
+  }, {
+    "name" : "heat_index_f",
+    "type" : "int"
+  }, {
+    "name" : "heat_index_string",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "icon_url_base",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "icon_url_name",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "latitude",
+    "type" : "double"
+  }, {
+    "name" : "location",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "longitude",
+    "type" : "double"
+  }, {
+    "name" : "ob_url",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "observation_time",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "observation_time_rfc822",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "pressure_in",
+    "type" : "double"
+  }, {
+    "name" : "pressure_mb",
+    "type" : "double"
+  }, {
+    "name" : "pressure_string",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "relative_humidity",
+    "type" : "int"
+  }, {
+    "name" : "station_id",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "temp_c",
+    "type" : "double"
+  }, {
+    "name" : "temp_f",
+    "type" : "double"
+  }, {
+    "name" : "temperature_string",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "ts",
+    "type" : "long"
+  }, {
+    "name" : "two_day_history_url",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "uuid",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "visibility_mi",
+    "type" : "double"
+  }, {
+    "name" : "weather",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "wind_degrees",
+    "type" : "int"
+  }, {
+    "name" : "wind_dir",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "wind_kt",
+    "type" : "int"
+  }, {
+    "name" : "wind_mph",
+    "type" : "double"
+  }, {
+    "name" : "wind_string",
+    "type" : [ "null", "string" ],
+    "default" : null
+  } ]
+}
+````
+
+#### Example Data
 
 #### Airport Weather Flink SQL Table
 
@@ -12,6 +154,7 @@ CREATE CATALOG pulsar WITH (
 );
 
 SHOW CURRENT DATABASE;
+
 SHOW DATABASES;
 
 USE CATALOG pulsar;
