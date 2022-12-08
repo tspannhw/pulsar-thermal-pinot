@@ -2,6 +2,15 @@
 
 #### Weather Function builds topics
 
+#### Consume Weather Topic from Pulsar
+
+````
+bin/pulsar-client consume "persistent://public/default/aircraftweather2" -s test1 -n 0
+
+----- got message -----
+key:[9a88cbf5-92df-4546-bda5-a57dba7e453f], properties:[language=Java], content:{"location":"Greenwood, Greenwood County Airport, SC","station_id":"KGRD","latitude":34.24722,"longitude":-82.15472,"observation_time":"Last Updated on Dec 8 2022, 8:56 am EST","observation_time_rfc822":"Thu, 08 Dec 2022 08:56:00 -0500","weather":"Fog","temperature_string":"61.0 F (16.1 C)","temp_f":61.0,"temp_c":16.1,"relative_humidity":100,"wind_string":"Calm","wind_dir":"North","wind_degrees":0,"wind_mph":0.0,"wind_kt":0,"pressure_string":"1023.5 mb","pressure_mb":1023.5,"pressure_in":30.24,"dewpoint_string":"61.0 F (16.1 C)","dewpoint_f":61.0,"dewpoint_c":16.1,"heat_index_f":0,"heat_index_c":0,"visibility_mi":0.25,"icon_url_base":"https://forecast.weather.gov/images/wtf/small/","two_day_history_url":"https://www.weather.gov/data/obhistory/KGRD.html","icon_url_name":"fg.png","ob_url":"https://www.weather.gov/data/METAR/KGRD.1.txt","uuid":"d429a3e3-d12d-4297-9192-81a2985d8725","ts":1670520773418}
+
+````
 
 #### Build Pinot Schema
 
@@ -159,7 +168,11 @@ curl -X POST "http://localhost:9000/tables" -H "accept: application/json" -H "Co
 
 pinot+http://192.168.1.157:8099/query?server=192.168.1.157:9000/
 
-#### Example Data
+#### Example Data - data/weather.json
+
+````
+{"location":"Union County Airport - Troy Shelton Field, SC","station_id":"K35A","latitude":34.68695,"longitude":-81.64117,"observation_time":"Last Updated on Dec 7 2022, 3:35 pm EST","observation_time_rfc822":"Wed, 07 Dec 2022 15:35:00 -0500","weather":"Overcast","temperature_string":"64.0 F (17.7 C)","temp_f":64.0,"temp_c":17.7,"relative_humidity":98,"wind_string":"Southwest at 4.6 MPH (4 KT)","wind_dir":"Southwest","wind_degrees":220,"wind_mph":4.6,"wind_kt":4,"pressure_mb":0.0,"pressure_in":30.26,"dewpoint_string":"63.1 F (17.3 C)","dewpoint_f":63.1,"dewpoint_c":17.3,"heat_index_f":0,"heat_index_c":0,"visibility_mi":10.0,"icon_url_base":"https://forecast.weather.gov/images/wtf/small/","two_day_history_url":"https://www.weather.gov/data/obhistory/K35A.html","icon_url_name":"ovc.png","ob_url":"https://www.weather.gov/data/METAR/K35A.1.txt","uuid":"5d6ac217-9c3d-4228-87d4-778cbf8561a2","ts":1670508009894}
+````
 
 #### Start Flink in Docker
 
