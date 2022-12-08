@@ -176,17 +176,11 @@ pinot+http://192.168.1.157:8099/query?server=192.168.1.157:9000/
 
 CREATE CATALOG pulsar WITH (
    'type' = 'pulsar-catalog',
-   'catalog-service-url' = 'pulsar://localhost:6650',
-   'catalog-admin-url' = 'http://localhost:8080'
+   'catalog-service-url' = 'pulsar://Timothys-MBP:6650',
+   'catalog-admin-url' = 'http://Timothys-MBP:8080'
 );
 
-SHOW CURRENT DATABASE;
-
-SHOW DATABASES;
-
 USE CATALOG pulsar;
-
-set table.dynamic-table-options.enabled = true;
 
 show databases;
 
@@ -195,7 +189,7 @@ use `public/default`;
 SHOW TABLES;
 
 
-CREATE TABLE airportweather (
+CREATE TABLE airportweather3 (
 `dewpoint_c` DOUBLE,                      
 `dewpoint_f` DOUBLE,                      
 `dewpoint_string` STRING,                       
@@ -234,6 +228,46 @@ CREATE TABLE airportweather (
   'admin-url' = 'http://Timothys-MBP:8080',
   'service-url' = 'pulsar://Timothys-MBP:6650'
 )
+
+desc aircraftweather2;
+
++-------------------------+--------+-------+-----+--------+-----------+
+|                    name |   type |  null | key | extras | watermark |
++-------------------------+--------+-------+-----+--------+-----------+
+|              dewpoint_c | DOUBLE | FALSE |     |        |           |
+|              dewpoint_f | DOUBLE | FALSE |     |        |           |
+|         dewpoint_string | STRING |  TRUE |     |        |           |
+|            heat_index_c |    INT | FALSE |     |        |           |
+|            heat_index_f |    INT | FALSE |     |        |           |
+|       heat_index_string | STRING |  TRUE |     |        |           |
+|           icon_url_base | STRING |  TRUE |     |        |           |
+|           icon_url_name | STRING |  TRUE |     |        |           |
+|                latitude | DOUBLE | FALSE |     |        |           |
+|                location | STRING |  TRUE |     |        |           |
+|               longitude | DOUBLE | FALSE |     |        |           |
+|                  ob_url | STRING |  TRUE |     |        |           |
+|        observation_time | STRING |  TRUE |     |        |           |
+| observation_time_rfc822 | STRING |  TRUE |     |        |           |
+|             pressure_in | DOUBLE | FALSE |     |        |           |
+|             pressure_mb | DOUBLE | FALSE |     |        |           |
+|         pressure_string | STRING |  TRUE |     |        |           |
+|       relative_humidity |    INT | FALSE |     |        |           |
+|              station_id | STRING |  TRUE |     |        |           |
+|                  temp_c | DOUBLE | FALSE |     |        |           |
+|                  temp_f | DOUBLE | FALSE |     |        |           |
+|      temperature_string | STRING |  TRUE |     |        |           |
+|                      ts | BIGINT | FALSE |     |        |           |
+|     two_day_history_url | STRING |  TRUE |     |        |           |
+|                    uuid | STRING |  TRUE |     |        |           |
+|           visibility_mi | DOUBLE | FALSE |     |        |           |
+|                 weather | STRING |  TRUE |     |        |           |
+|            wind_degrees |    INT | FALSE |     |        |           |
+|                wind_dir | STRING |  TRUE |     |        |           |
+|                 wind_kt |    INT | FALSE |     |        |           |
+|                wind_mph | DOUBLE | FALSE |     |        |           |
+|             wind_string | STRING |  TRUE |     |        |           |
++-------------------------+--------+-------+-----+--------+-----------+
+32 rows in set
 
 
 ````
