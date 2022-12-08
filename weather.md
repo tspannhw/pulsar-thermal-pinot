@@ -284,3 +284,9 @@ desc aircraftweather2;
 
 
 ````
+
+
+#### References
+
+* https://github.com/streamnative/pulsar-flink-patterns
+* https://nightlies.apache.org/flink/flink-docs-master/docs/deployment/resource-providers/standalone/docker/
