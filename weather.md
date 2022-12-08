@@ -9,8 +9,8 @@
 
 docker exec -it pinot-controller bin/pinot-admin.sh JsonToPinotSchema \
   -timeColumnName ts \
-  -metrics "temperature,humidity,co2,totalvocppb,equivalentco2ppm,pressure,temperatureicp,cputempf"\
-  -dimensions "host,ipaddress" \
+  -metrics "pressure_in,temp_c,temp_f,wind_mph,relative_humidity,pressure_mb"\
+  -dimensions "station_id,location,latitude,longitude" \
   -pinotSchemaName=weather \
   -jsonFile=/data/weather.json \
   -outputDir=/config
@@ -18,7 +18,7 @@ docker exec -it pinot-controller bin/pinot-admin.sh JsonToPinotSchema \
   
 ````
 
-#### Pular Schmea
+#### Pulsar Schmea
 
 ````
 {
