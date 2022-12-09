@@ -220,14 +220,23 @@ weather order by ts desc limit 102;
 
 **Add the weather table via REST**
 
+
 ![pinot](https://raw.githubusercontent.com/tspannhw/pulsar-thermal-pinot/main/images/pinotlistables.jpg)
+
+**List tables in Pinot**
 
 ![pinottable](https://raw.githubusercontent.com/tspannhw/pulsar-thermal-pinot/main/images/pinotWeatherTable.jpg)
 
+**Weather Table**
+
 ![pinotquery](https://raw.githubusercontent.com/tspannhw/pulsar-thermal-pinot/main/images/pinotWeatherQuery.jpg)
+
+
+**Weather Query**
 
 ![pinotconsole](https://raw.githubusercontent.com/tspannhw/pulsar-thermal-pinot/main/images/pinotQueryConsoleWeather.jpg)
 
+**Weather Query in the Console**
 
 
 
@@ -235,6 +244,8 @@ weather order by ts desc limit 102;
 
 
 ![adddataset](https://raw.githubusercontent.com/tspannhw/pulsar-thermal-pinot/main/images/pinotAddDataset.jpg)
+
+**Add a Pinot dataset for weather to Superset**
 
 ![supersetdataset](https://raw.githubusercontent.com/tspannhw/pulsar-thermal-pinot/main/images/supersetAddWeatherDataset.jpg)
 
@@ -250,6 +261,7 @@ weather order by ts desc limit 102;
 
 ![supersetd2](https://raw.githubusercontent.com/tspannhw/pulsar-thermal-pinot/main/images/weatherDashboard2.jpg)
 
+**Weather dashboards in Superset**
 
 
 #### Example Data - data/weather.json
@@ -370,8 +382,12 @@ desc aircraftweather2;
 ````
 
 ![flink](https://raw.githubusercontent.com/tspannhw/pulsar-thermal-pinot/main/images/weatherPinotFlinkRow.jpg)
+
+**Flink SQL Row**
+
 ![flinksql2](https://raw.githubusercontent.com/tspannhw/pulsar-thermal-pinot/main/images/weatherPinotFlinkResults.jpg)
 
+**Flink SQL Results**
 
 #### References
 
