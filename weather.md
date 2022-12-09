@@ -172,6 +172,17 @@ pinot+http://timothys-mbp:8099/query?server=http://timothys-mbp:9000/
 
 See:  https://docs.pinot.apache.org/integrations/superset
 
+#### Pinot Queries
+
+````
+select * from weather order by ts desc limit 102;
+
+select dewpoint_string,location,latitude,longitude, temperature_string, weather, wind_string, observation_time, ts
+from 
+weather order by ts desc limit 102;
+
+````
+
 #### Example Data - data/weather.json
 
 ````
@@ -288,7 +299,6 @@ desc aircraftweather2;
 
 
 ````
-
 
 #### References
 
