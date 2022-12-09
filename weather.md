@@ -2,6 +2,12 @@
 
 It is so easy to build Pulsar to Pinot applications for real-time analytics, I added another source of data for weather feeds for the US.   I am looking at adding transit and aircraft data feeds next.   The sky is the limit with Pulsar + Pinot.
 
+![nifi](https://raw.githubusercontent.com/tspannhw/pulsar-thermal-pinot/main/images/nifiWeatherSend.jpg)
+
+Apache NiFi acquires our weather feed for the United States from [NOAA](https://w1.weather.gov/xml/current_obs/).
+
+**Reference**:  [https://github.com/tspannhw/SmartWeather](https://github.com/tspannhw/SmartWeather)
+
 
 
 #### Weather Function builds topics, but these are the topics
