@@ -7,7 +7,7 @@ It is so easy to build Pulsar to Pinot applications for real-time analytics, I a
 Apache NiFi acquires our weather feed for the United States from [NOAA](https://w1.weather.gov/xml/current_obs/).
 
 **Reference**:  [https://github.com/tspannhw/SmartWeather](https://github.com/tspannhw/SmartWeather)
-
+**Reference**: [Weather How-To](https://medium.com/@tspann/parsing-weather-feeds-to-add-to-real-time-streams-ec5ecc2849fb)
 
 
 #### Weather Function builds topics, but these are the topics
@@ -18,7 +18,6 @@ bin/pulsar-admin topics list public/default
 bin/pulsar-admin topics create persistent://public/default/weather
 
 bin/pulsar-admin topics create persistent://public/default/aircraftweather2
-
 
 ````
 
@@ -41,35 +40,6 @@ bin/pulsar-client consume "persistent://public/default/aircraftweather2" -s test
 ----- got message -----
 key:[9a88cbf5-92df-4546-bda5-a57dba7e453f], properties:[language=Java], content:{"location":"Greenwood, Greenwood County Airport, SC","station_id":"KGRD","latitude":34.24722,"longitude":-82.15472,"observation_time":"Last Updated on Dec 8 2022, 8:56 am EST","observation_time_rfc822":"Thu, 08 Dec 2022 08:56:00 -0500","weather":"Fog","temperature_string":"61.0 F (16.1 C)","temp_f":61.0,"temp_c":16.1,"relative_humidity":100,"wind_string":"Calm","wind_dir":"North","wind_degrees":0,"wind_mph":0.0,"wind_kt":0,"pressure_string":"1023.5 mb","pressure_mb":1023.5,"pressure_in":30.24,"dewpoint_string":"61.0 F (16.1 C)","dewpoint_f":61.0,"dewpoint_c":16.1,"heat_index_f":0,"heat_index_c":0,"visibility_mi":0.25,"icon_url_base":"https://forecast.weather.gov/images/wtf/small/","two_day_history_url":"https://www.weather.gov/data/obhistory/KGRD.html","icon_url_name":"fg.png","ob_url":"https://www.weather.gov/data/METAR/KGRD.1.txt","uuid":"d429a3e3-d12d-4297-9192-81a2985d8725","ts":1670520773418}
 
-````
-
-#### Build Pinot Schema
-
-````
-
-docker exec -it pinot-controller bin/pinot-admin.sh JsonToPinotSchema \
-  -timeColumnName ts \
-  -metrics "pressure_in,temp_c,temp_f,wind_mph,relative_humidity,pressure_mb"\
-  -dimensions "station_id,location,latitude,longitude" \
-  -pinotSchemaName=weather \
-  -jsonFile=/data/weather.json \
-  -outputDir=/config
-  
-  
-````
-
-#### Load Pinot Schema and Table
-
-````
-
-docker exec -it pinot-controller bin/pinot-admin.sh AddSchema   \
-  -schemaFile /config/weatherschema.json \
-  -exec
-
-````
-
-````
-curl -X POST "http://localhost:9000/tables" -H "accept: application/json" -H "Content-Type: application/json" -d "{ \"tableName\": \"weather\", \"tableType\": \"REALTIME\", \"segmentsConfig\": { \"timeColumnName\": \"ts\", \"schemaName\": \"weather\", \"replication\": \"1\", \"replicasPerPartition\": \"1\" }, \"ingestionConfig\": { \"batchIngestionConfig\": { \"segmentIngestionType\": \"APPEND\", \"segmentIngestionFrequency\": \"DAILY\" } }, \"tableIndexConfig\": { \"loadMode\": \"MMAP\", \"streamConfigs\": { \"streamType\": \"pulsar\", \"stream.pulsar.topic.name\": \"persistent://public/default/aircraftweather2\", \"stream.pulsar.bootstrap.servers\": \"pulsar://Timothys-MBP:6650\", \"stream.pulsar.consumer.type\": \"lowlevel\", \"stream.pulsar.fetch.timeout.millis\": \"10000\", \"stream.pulsar.consumer.prop.auto.offset.reset\": \"largest\", \"stream.pulsar.consumer.factory.class.name\": \"org.apache.pinot.plugin.stream.pulsar.PulsarConsumerFactory\", \"stream.pulsar.decoder.class.name\": \"org.apache.pinot.plugin.inputformat.json.JSONMessageDecoder\", \"realtime.segment.flush.threshold.rows\": \"0\", \"realtime.segment.flush.threshold.time\": \"1h\", \"realtime.segment.flush.threshold.segment.size\": \"5M\" } }, \"tenants\": {}, \"metadata\": {}}"
 ````
 
 #### Pulsar Schmea
@@ -195,6 +165,37 @@ curl -X POST "http://localhost:9000/tables" -H "accept: application/json" -H "Co
 }
 ````
 
+
+#### Build Pinot Schema
+
+````
+
+docker exec -it pinot-controller bin/pinot-admin.sh JsonToPinotSchema \
+  -timeColumnName ts \
+  -metrics "pressure_in,temp_c,temp_f,wind_mph,relative_humidity,pressure_mb"\
+  -dimensions "station_id,location,latitude,longitude" \
+  -pinotSchemaName=weather \
+  -jsonFile=/data/weather.json \
+  -outputDir=/config
+  
+  
+````
+
+#### Load Pinot Schema and Table
+
+````
+
+docker exec -it pinot-controller bin/pinot-admin.sh AddSchema   \
+  -schemaFile /config/weatherschema.json \
+  -exec
+
+````
+
+````
+curl -X POST "http://localhost:9000/tables" -H "accept: application/json" -H "Content-Type: application/json" -d "{ \"tableName\": \"weather\", \"tableType\": \"REALTIME\", \"segmentsConfig\": { \"timeColumnName\": \"ts\", \"schemaName\": \"weather\", \"replication\": \"1\", \"replicasPerPartition\": \"1\" }, \"ingestionConfig\": { \"batchIngestionConfig\": { \"segmentIngestionType\": \"APPEND\", \"segmentIngestionFrequency\": \"DAILY\" } }, \"tableIndexConfig\": { \"loadMode\": \"MMAP\", \"streamConfigs\": { \"streamType\": \"pulsar\", \"stream.pulsar.topic.name\": \"persistent://public/default/aircraftweather2\", \"stream.pulsar.bootstrap.servers\": \"pulsar://Timothys-MBP:6650\", \"stream.pulsar.consumer.type\": \"lowlevel\", \"stream.pulsar.fetch.timeout.millis\": \"10000\", \"stream.pulsar.consumer.prop.auto.offset.reset\": \"largest\", \"stream.pulsar.consumer.factory.class.name\": \"org.apache.pinot.plugin.stream.pulsar.PulsarConsumerFactory\", \"stream.pulsar.decoder.class.name\": \"org.apache.pinot.plugin.inputformat.json.JSONMessageDecoder\", \"realtime.segment.flush.threshold.rows\": \"0\", \"realtime.segment.flush.threshold.time\": \"1h\", \"realtime.segment.flush.threshold.segment.size\": \"5M\" } }, \"tenants\": {}, \"metadata\": {}}"
+````
+
+
 #### Pinot to Superset connection
 
 pinot+http://192.168.1.157:8099/query?server=192.168.1.157:9000/
@@ -202,6 +203,7 @@ pinot+http://192.168.1.157:8099/query?server=192.168.1.157:9000/
 pinot+http://timothys-mbp:8099/query?server=http://timothys-mbp:9000/
 
 See:  https://docs.pinot.apache.org/integrations/superset
+
 
 #### Pinot Queries
 
@@ -213,6 +215,15 @@ from
 weather order by ts desc limit 102;
 
 ````
+
+#### Superset Analytics
+
+[superset](https://raw.githubusercontent.com/tspannhw/pulsar-thermal-pinot/main/images/weatherdashboard3.jpg)
+
+[supersetdashboard](https://raw.githubusercontent.com/tspannhw/pulsar-thermal-pinot/main/images/weatherSupersetdashboard.jpg)
+
+
+
 
 #### Example Data - data/weather.json
 
@@ -330,6 +341,10 @@ desc aircraftweather2;
 
 
 ````
+
+[flink](https://raw.githubusercontent.com/tspannhw/pulsar-thermal-pinot/main/images/weatherPinotFlinkRow.jpg)
+[flinksql2](https://raw.githubusercontent.com/tspannhw/pulsar-thermal-pinot/main/images/weatherPinotFlinkResults.jpg)
+
 
 #### References
 
