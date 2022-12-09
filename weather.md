@@ -205,7 +205,7 @@ pinot+http://timothys-mbp:8099/query?server=http://timothys-mbp:9000/
 See:  https://docs.pinot.apache.org/integrations/superset
 
 
-#### Pinot Queries
+#### Pinot Queries against real-time table
 
 ````
 select * from weather order by ts desc limit 102;
@@ -216,12 +216,39 @@ weather order by ts desc limit 102;
 
 ````
 
+[pinotrest](https://raw.githubusercontent.com/tspannhw/pulsar-thermal-pinot/main/images/pinotAddWeatherTable.jpg)
+
+Add the weather table via REST
+
+[pinot](https://raw.githubusercontent.com/tspannhw/pulsar-thermal-pinot/main/images/pinotlistables.jpg)
+
+[pinottable](https://raw.githubusercontent.com/tspannhw/pulsar-thermal-pinot/main/images/pinotWeatherTable.jpg)
+
+[pinotquery](https://raw.githubusercontent.com/tspannhw/pulsar-thermal-pinot/main/images/pinotWeatherQuery.jpg)
+
+[pinotconsole](https://raw.githubusercontent.com/tspannhw/pulsar-thermal-pinot/main/images/pinotQueryConsoleWeather.jpg)
+
+
+
+
 #### Superset Analytics
+
+
+[adddataset](https://raw.githubusercontent.com/tspannhw/pulsar-thermal-pinot/main/images/pinotAddDataset.jpg)
+
+[supersetdataset](https://raw.githubusercontent.com/tspannhw/pulsar-thermal-pinot/main/images/supersetAddWeatherDataset.jpg)
+
+Add a dataset
+
+[supersetchart](https://raw.githubusercontent.com/tspannhw/pulsar-thermal-pinot/main/images/weatherAddChart.jpg)
+
+Add a chart
 
 [superset](https://raw.githubusercontent.com/tspannhw/pulsar-thermal-pinot/main/images/weatherdashboard3.jpg)
 
 [supersetdashboard](https://raw.githubusercontent.com/tspannhw/pulsar-thermal-pinot/main/images/weatherSupersetdashboard.jpg)
 
+[supersetd2](https://raw.githubusercontent.com/tspannhw/pulsar-thermal-pinot/main/images/weatherDashboard2.jpg)
 
 
 
