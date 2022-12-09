@@ -1,6 +1,6 @@
 #### Pulsar - Pinot - Weather
 
-It is so easy to build Pulsar to Pinot applications for real-time analytics, I added another source of data for weather feeds for the US.   I am looking at adding transit and aircraft data feeds next.   The sky is the limit with Pulsar + Pinot.
+It is so easy to build Pulsar to Pinot applications for real-time analytics, I added another source of data for weather feeds for the US.   I am looking at adding transit and aircraft data feeds next.   The sky is the limit with Pulsar + Pinot.   I will probably pull more sources from my big list from the [Let's Monitor talk](https://github.com/tspannhw/FLiP-Current22-LetsMonitorAllTheThings).
 
 ![nifi](https://raw.githubusercontent.com/tspannhw/pulsar-thermal-pinot/main/images/nifiWeatherSend.jpg)
 
