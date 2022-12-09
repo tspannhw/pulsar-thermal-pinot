@@ -216,17 +216,17 @@ weather order by ts desc limit 102;
 
 ````
 
-[pinotrest](https://raw.githubusercontent.com/tspannhw/pulsar-thermal-pinot/main/images/pinotAddWeatherTable.jpg)
+![pinotrest](https://raw.githubusercontent.com/tspannhw/pulsar-thermal-pinot/main/images/pinotAddWeatherTable.jpg)
 
-Add the weather table via REST
+**Add the weather table via REST**
 
-[pinot](https://raw.githubusercontent.com/tspannhw/pulsar-thermal-pinot/main/images/pinotlistables.jpg)
+![pinot](https://raw.githubusercontent.com/tspannhw/pulsar-thermal-pinot/main/images/pinotlistables.jpg)
 
-[pinottable](https://raw.githubusercontent.com/tspannhw/pulsar-thermal-pinot/main/images/pinotWeatherTable.jpg)
+![pinottable](https://raw.githubusercontent.com/tspannhw/pulsar-thermal-pinot/main/images/pinotWeatherTable.jpg)
 
-[pinotquery](https://raw.githubusercontent.com/tspannhw/pulsar-thermal-pinot/main/images/pinotWeatherQuery.jpg)
+![pinotquery](https://raw.githubusercontent.com/tspannhw/pulsar-thermal-pinot/main/images/pinotWeatherQuery.jpg)
 
-[pinotconsole](https://raw.githubusercontent.com/tspannhw/pulsar-thermal-pinot/main/images/pinotQueryConsoleWeather.jpg)
+![pinotconsole](https://raw.githubusercontent.com/tspannhw/pulsar-thermal-pinot/main/images/pinotQueryConsoleWeather.jpg)
 
 
 
@@ -234,21 +234,21 @@ Add the weather table via REST
 #### Superset Analytics
 
 
-[adddataset](https://raw.githubusercontent.com/tspannhw/pulsar-thermal-pinot/main/images/pinotAddDataset.jpg)
+![adddataset](https://raw.githubusercontent.com/tspannhw/pulsar-thermal-pinot/main/images/pinotAddDataset.jpg)
 
-[supersetdataset](https://raw.githubusercontent.com/tspannhw/pulsar-thermal-pinot/main/images/supersetAddWeatherDataset.jpg)
+![supersetdataset](https://raw.githubusercontent.com/tspannhw/pulsar-thermal-pinot/main/images/supersetAddWeatherDataset.jpg)
 
-Add a dataset
+**Add a dataset**
 
-[supersetchart](https://raw.githubusercontent.com/tspannhw/pulsar-thermal-pinot/main/images/weatherAddChart.jpg)
+![supersetchart](https://raw.githubusercontent.com/tspannhw/pulsar-thermal-pinot/main/images/weatherAddChart.jpg)
 
-Add a chart
+**Add a chart**
 
-[superset](https://raw.githubusercontent.com/tspannhw/pulsar-thermal-pinot/main/images/weatherdashboard3.jpg)
+![superset](https://raw.githubusercontent.com/tspannhw/pulsar-thermal-pinot/main/images/weatherdashboard3.jpg)
 
-[supersetdashboard](https://raw.githubusercontent.com/tspannhw/pulsar-thermal-pinot/main/images/weatherSupersetdashboard.jpg)
+![supersetdashboard](https://raw.githubusercontent.com/tspannhw/pulsar-thermal-pinot/main/images/weatherSupersetdashboard.jpg)
 
-[supersetd2](https://raw.githubusercontent.com/tspannhw/pulsar-thermal-pinot/main/images/weatherDashboard2.jpg)
+![supersetd2](https://raw.githubusercontent.com/tspannhw/pulsar-thermal-pinot/main/images/weatherDashboard2.jpg)
 
 
 
@@ -369,8 +369,8 @@ desc aircraftweather2;
 
 ````
 
-[flink](https://raw.githubusercontent.com/tspannhw/pulsar-thermal-pinot/main/images/weatherPinotFlinkRow.jpg)
-[flinksql2](https://raw.githubusercontent.com/tspannhw/pulsar-thermal-pinot/main/images/weatherPinotFlinkResults.jpg)
+![flink](https://raw.githubusercontent.com/tspannhw/pulsar-thermal-pinot/main/images/weatherPinotFlinkRow.jpg)
+![flinksql2](https://raw.githubusercontent.com/tspannhw/pulsar-thermal-pinot/main/images/weatherPinotFlinkResults.jpg)
 
 
 #### References
