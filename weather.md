@@ -1,6 +1,31 @@
 #### Pulsar - Pinot - Weather
 
-#### Weather Function builds topics
+It is so easy to build Pulsar to Pinot applications for real-time analytics, I added another source of data for weather feeds for the US.   I am looking at adding transit and aircraft data feeds next.   The sky is the limit with Pulsar + Pinot.
+
+
+
+#### Weather Function builds topics, but these are the topics
+
+````
+bin/pulsar-admin topics list public/default
+
+bin/pulsar-admin topics create persistent://public/default/weather
+
+bin/pulsar-admin topics create persistent://public/default/aircraftweather2
+
+
+````
+
+#### Weather Function in Pulsar to Produce our feed
+
+**Reference**:  [https://github.com/tspannhw/pulsar-weather-function](https://github.com/tspannhw/pulsar-weather-function)
+
+````
+bin/pulsar-admin functions stop --name Weather --namespace default --tenant public
+bin/pulsar-admin functions delete --name Weather --namespace default --tenant public
+bin/pulsar-admin functions create --auto-ack true --jar /Users/tspann/Documents/code/pulsar-weather-function/target/weather-1.0.jar --classname "dev.pulsarfunction.weather.WeatherFunction" --dead-letter-topic "persistent://public/default/aircraftweatherdead" --inputs "persistent://public/default/weather" --log-topic "persistent://public/default/aircraftweatherlog" --name Weather --namespace default --tenant public --max-message-retries 5
+
+````
 
 #### Consume Weather Topic from Pulsar
 
