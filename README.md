@@ -199,6 +199,8 @@ docker exec -it pinot-controller bin/pinot-admin.sh AddSchema   \
   
 ````
 
+#### Load schema via REST
+
 #### Add Table Via Swagger UI / Curl
 
 ````
