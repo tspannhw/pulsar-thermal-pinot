@@ -41,6 +41,8 @@ curl http://localhost:8080/admin/v2/persistent/public/default
 
 curl http://localhost:8080/admin/v2/persistent/public/default/thermalsensors-partition-0/stats
 
+http://localhost:8080/admin/v2/persistent/public/default/thermalsensors/partitions?createLocalTopicOnly=false
+
 ````
 
 
