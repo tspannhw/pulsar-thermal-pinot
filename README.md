@@ -19,9 +19,11 @@ https://www.meetup.com/new-york-city-apache-pulsar-meetup/events/289817171/
 #### Create Topic in Pulsar
 
 ````
+bin/pulsar-admin topics delete persistent://public/default/thermalsensors
+
 bin/pulsar-admin topics create persistent://public/default/thermalsensors
 
-bin/pulsar-admin topics create-partitioned-topic -p 1 persistent://public/default/thermalsensors
+bin/pulsar-admin topics create-partitioned-topic --partitions 1 persistent://public/default/thermalsensors
 ````
 
 #### Consume Data in Pulsar
